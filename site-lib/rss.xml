@@ -1,0 +1,722 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ovo]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://hhhhhyx142857.github.io/Obsidian/</link><image><url>./https://hhhhhyx142857.github.io/Obsidian/site-lib/media/favicon.png</url><title>ovo</title><link>https://hhhhhyx142857.github.io/Obsidian/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 15 Oct 2025 13:07:36 GMT</lastBuildDate><atom:link href="./https://hhhhhyx142857.github.io/Obsidian/site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 15 Oct 2025 13:06:41 GMT</pubDate><copyright><![CDATA[hyx]]></copyright><ttl>60</ttl><dc:creator>hyx</dc:creator><item><title><![CDATA[E02 Riemann可积的充要条件]]></title><description><![CDATA[Riemann可积的充要条件
+设 是定义在区间 上的有界函数，则以下等价： Riemann 可积
+Darboux 可积：，其中 和 分别是 Darboux 上下和
+Lebesgue 判别法： 的不连续点集是 Lebesgue 零测集
+振幅条件：对任意 ，存在分划 使得振幅 的子区间总长度小于 主要等价关系的证明思路
+Darboux 可积 ⇔ Riemann 可积 对任意分划 ，有 若 Darboux 可积，则上下和之差趋于 0，故 Riemann 和收敛到同一极限
+若 Riemann 可积，可通过上下确界构造证明 Darboux 可积 Lebesgue 判别法的证明概要 记 ，其中 是 在 处的振幅 连续当且仅当 关键步骤：若 Riemann 可积，则对任意 ，集合 是零测集
+由于不连续点集 ，为零测集的可数并，故为零测集
+反之，若 有界且不连续点集为零测集，可通过振幅条件证明可积性 振幅条件的等价性 振幅 的子区间对应于函数在该区间振荡较大的部分
+若这些区间的总长度可任意小，则可构造分划使 Darboux 上下和之差任意小
+这等价于不连续点集是零测集，因为不连续点正是那些振幅大于 0 的点 若在区间 上： 一致有界： 对所有 成立 单调（对每个固定 ）且 （一致趋于 0）
+则 在 上一致收敛。若： 一致收敛 单调（对每个 ）且一致有界：
+则 一致收敛。考虑
+[
+S(x) = \sum_{n=1}^\infty \frac{\sin(nx)}{n}, \quad x \in [\delta, 2\pi-\delta], \ \delta &gt; 0.
+]
+不绝对收敛： 发散（比较谐波级数）。
+但可用 Dirichlet 判别法： ，部分和 一致有界 一致（与 无关） 所以级数在 上一致收敛，每项连续 ⇒ 连续（在 内闭一致收敛，所以在 连续）。 证明级数在考虑区间上点态收敛（数项级数方法）。
+使用 Dirichlet 或 Abel 判别法验证一致收敛（不依赖绝对收敛）。
+由一致收敛 + 项连续 ⇒ 和函数连续。 若区间包含奇点（如 ），可先证在内闭区间上一致收敛，得到和函数在去掉奇点后的区域连续。
+若级数来自 Fourier 级数，可利用卷积核性质证明部分和一致收敛到函数（对光滑函数）。
+总结：不绝对收敛时，重点找部分和的一致有界性与系数的单调一致趋于零（Dirichlet），或级数的一致收敛性与系数的一致有界单调（Abel），从而得到一致收敛，进而推出连续性。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/e02-riemann可积的充要条件.html</link><guid isPermaLink="false">math/Mathematical Analysis/2nd/E02 Riemann可积的充要条件.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Wed, 15 Oct 2025 03:17:38 GMT</pubDate></item><item><title><![CDATA[04 Fourier]]></title><description><![CDATA[定义
+对于上的可积函数，Fourier变换
+其中为频率，Fourier逆变换: 引理(Riemann-Lebesgue) 可积 引理
+对任意、,
+中不存在，s.t. ，该运算不成群，否则与Riemann-Lebesgue引理矛盾. 的Fourier变换
+（1）物理空间的平移对应频率空间乘以相应的频率（2）物理空间的伸缩变换（3）如果非退化
+（4）物理空间的求导等价于频率空间的乘法
+（5）物理空间的乘法等价于频率空间的求导
+（6）物理空间的光滑性等价于频率空间的衰减如果f有紧支集，光滑光滑，衰减任意快定义
+称光滑函数是速降函数，如果对全部有
+上的所有速降函数构成Schwartz空间
+Note
+如果，则有
+证明：由于 ，有 （因为 和 速降，属于 且乘积可积）。
+由 Fubini 定理可交换积分次序：内层积分是 ，因此积分等式：定理:高斯分布的Fourier变换 Fourier变换的逆变换
+有
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/04-fourier.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/04 Fourier.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Wed, 15 Oct 2025 01:31:26 GMT</pubDate></item><item><title><![CDATA[01 Fourier]]></title><description><![CDATA[foreword
+热传导方程:线性的偏微分方程一般解法（分离变量法），假设 为某个常数
+（温度非负且随时间递减,c&lt;0） 假设温度分布在,在端点处取0
+,所以为整数
+为了理解 的解（为初始温度分布）
+如果 可以写成 的叠加，则系数 由下式给出：因为考虑函数的奇偶分解，奇函数用sin展开，偶函数用cos展开
+奇延拓
+设函数定义在区间上。奇延拓是将拓展到整个区间上的奇函数，定义为： 在区间上，正弦函数和余弦函数具有正交性： 傅里叶级数展开：
+得结论：
+问题：
+① 级数是否收敛？
+② 如果收敛，是否收敛到 ？Note
+Define Then 称为fourier级数 系数转换关系： 部分和记为： 光滑函数的Fourier级数
+可积函数可以决定Fourier系数，反过来Fourier级数也几乎决定了函数
+Fourier系数的唯一性
+如果可积，且对有
+因为条件表明$$
+{\int }{0}^{2\pi }f\left( x\right) {P}{n}\left( x\right) {dx} = 0.\begin{aligned}
+F(x) =&amp; \sum{k \in \mathbb{Z}} \hat{f}(k) \cdot e^{ikx}\
+\Rightarrow \hat{f}(k) =&amp; \frac{1}{2\pi} \int_0^{2\pi} F(x)e^{-ikx}dx\
+=&amp; \frac{1}{2\pi} \int_0^{2\pi} \left( \sum{l \in \mathbb{Z}} \hat{f}(l)e^{ilx} \right) e^{-ikx}dx\
+\overset{绝对收敛}{=}&amp; \frac{1}{2\pi} \sum{l \in \mathbb{Z}} \int_0^{2\pi} \hat{f}(l)e^{i(l-k)x}dx(交换了积分次序)\
+=&amp; \hat{f}(k)
+\end{aligned}\frac{1}{2\pi} \int_0^{2\pi} e^{i(k-l)x} dx = \delta{kl}$$引理(Riemann-Lebesgue) 可积 我们利用连续可微的函数来逼近f,又若 连续可导， ，由有限，证毕。Note
+如果 是 上的周期函数且 Deduce that Note
+对任意、, Note
+当 时，计算 当 时，值为 可以推出这就是Dirichlet核函数
+对于周期的可积函数，卷积的fourier级数等于分别fourier级数的乘积。
+吉布斯现象是指：当用傅里叶级数的部分和 去逼近一个有间断点的函数 时，在间断点附近会出现过冲（Overshoot）和振荡（Oscillation），并且随着部分和项数 的增加，这个过冲的幅度不会消失，而是趋近于一个固定的常数。
+吉布斯现象的根本原因在于 Dirichlet 核 不是恒等逼近。
+不满足，实际衰减是
+吉布斯现象解释了为什么傅里叶级数不适合直接用于逼近有间断的函数，对于性质良好的如光滑函数、解析函数还是有很好的作用的<a data-href="恒同逼近核" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/恒同逼近核.html" class="internal-link" target="_self" rel="noopener nofollow">恒同逼近核</a>的定义
+性质为：若 ,则，且在的Lebesgue点处有Definition
+Cesàro求和会让Fourier级数收敛变得很快！ {F}{N}\left( x\right) = \frac{1}{N}\mathop{\sum }\limits{{k = 0}}^{{N - 1}}\frac{\sin \left( {\left( {k + \frac{1}{2}}\right) x}\right) }{\sin \left( {\frac{1}{2}x}\right) } = \frac{1}{N}\frac{1}{\sin \left( {\frac{1}{2}x}\right) }\mathop{\sum }\limits_{{k = 0}}^{{N - 1}}\operatorname{Im}\left( {{e}^{\frac{i}{2}x}{e}^{ikx}}\right)$$ 由上知，Fejer核是恒同逼近。Fejer核的逐点收敛
+可积，则在的lebesgue点处，
+<br><a data-href="恒同逼近核" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/恒同逼近核.html" class="internal-link" target="_self" rel="noopener nofollow">恒同逼近核</a>，利用恒同逼近的性质就好了。Defi: 好的积分核 给定上的一族连续函数 是概率密度,
+在有界： 当，集中在附近 Fejer核是好核
+（恒同逼近核强大但条件高，我们可以舍弃一部分性质去获得更多好的核，此时我们不要求他具有点态衰减性质，对每一个点成立，希望能在最简单的情况下获得我们需要的卷积收敛性质）
+(3. -集中性): 这是最核心的条件。它要求当 很大时， 的“质量”几乎完全集中在原点的一个任意小的邻域内。这意味着 的值几乎只由 在 点附近的值决定，从而能够逼近 本身。性质
+是好的积分核,在上可积且一致有界
+在的连续点处有 Proof <br><a data-href="这里连续点可以改成lebsegue点处" href="./https://hhhhhyx142857.github.io/Obsidian/.html" class="internal-link" target="_self" rel="noopener nofollow">这里连续点可以改成lebsegue点处</a>推论
+，有一致收敛
+（连续一致连续上述定理的证明的放缩可以对所有点有一致的收敛性,即放缩对所有点成立，进而一致收敛） <br>
+这是个有限的三角级数,它将一致收敛到 ,所以,我们实际上再次证明了周期连续函数情形下的 <a data-href="E02 Stone-Weierstrass定理" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e02-stone-weierstrass定理.html" class="internal-link" target="_self" rel="noopener nofollow">E02 Stone-Weierstrass定理</a> 。Fejer核的一个应用
+假设是上的可积的周期函数，满足
+定义原函数
+连续，周期
+对于 ，由分部积分： 边界项为零是因为 且 。
+当 时,利用 Fubini 定理,我们有
+由于连续，时，
+另外,由于 所以,在 处,我们有 根据 Riemann-Lebesgue 引理, 。特别的有 注意到 ,因而当 时,上面的等式给出了 特别地,这表明可积函数的 Fourier 系数具有一定的衰减性质或者震荡性质,基于此 Fatou 构造了如下的反例:Example
+存在一个复数序列 ，其定义为： 不存在函数 使得其 Fourier 系数满足 对所有 成立。
+Riemann-Lebesgue 引理指出：若 ，则其 Fourier 系数满足 ,本题给出了逆命题的反例好的积分核都使积分值趋近于在0点处，Féjer 核也是恒同逼近核, 因而具备很好的收敛性质 (点态收敛, 范数收敛)。dirichlet核远离零点时震荡的很厉害，根据定义这个核函数在远离 0 点缺乏一致的小性,但好处是远离 0 点, 是有界的震荡函数。
+根据 Riemann-Lebesgue 引理,这部分趋于 0,也就是 在一点 处的收敛性质只取决于函数 在 邻域的正则性质。核大致可分类，一类是本身性质良好、收敛迅速且稳定的好核，另一类则是依靠振荡和抵消来实现收敛的核。局部化定理
+在上可积，以及有
+（把命题集中在了0左右的位置，带来更多好的性质）Proof 由于在区域 上， 满足 ，因此函数 在 上可积（因为 可积，且分母有界远离零）。<br>
+由<a data-href="E01 黎曼-勒贝格引理" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e01-黎曼-勒贝格引理.html" class="internal-link" target="_self" rel="noopener nofollow">E01 黎曼-勒贝格引理</a>，当 时，积分趋近于0，证毕
+，右边在N很大趋近于0
+在很小的时候，
+想让在0左右可积，由于sin(..)可积，
+只需要存在c为常数，在0处可积即可，因为在0处可积.Dini
+在上可积，,s.t.在处
+因为(由于的偶函数性，把0的两边合成了0的一边)Note 在一致有界（不依赖x和N） 现在开始关注一个连续的周期函数，它的 Fourier 级数在某点处发散。因而如果将“可微”这一假设替换为弱一些的“连续”，则定理 3.2.1 不成立。
+Quote
+如果一个函数是连续且可微的（或者满足更强的条件，如 Lipschitz 连续、有界变差等），那么它的 Fourier 级数将一致收敛于该函数本身。 反例说明“连续”这一看起来有道理的假设实际上是错误的，而且，反例的构造过程将阐述这一理论的重要原理。
+构造1
+这里讲的原理将被称为“对称破缺”。我们思维中的对称是 与 之间的对称，它们出现在函数的 Fourier 展开式中。例如，部分和算子 就反映了这种对称。同样地，Dirichlet、Fejer、Poisson 核也是这种意义下的对称。当破坏这种对称，即当把 Fourier 级数 分成两部分 和 时，我们便会逐渐涉及一些崭新且深刻的东西。
+下面给出一个简单的例子，锯齿函数 ，它关于 是奇函数，当 时，等于 。在第 2 章练习 8 中，有 现在考虑对称性被破坏的结果 和式 (3.2.1) 不同，上式不是某个 Riemann 可积函数的 Fourier 级数。事实上，假设它是某个可积函数的 Fourier 级数，记为 ，特别地， 是有界的。使用 Abel 平均，有 其中用到了下面这个简单的结论 所以，如果 满足 和 ，那么 。 将此引理应用在下面这个级数上 即上述提到的锯齿函数 的 Fourier 级数。这里 ，所以很明显 。此级数的 Abel 平均是 。但由于 是有界的，且 是好核，所以 关于 和 是一致有界的。
+现在我们开始涉及核心内容，注意到 和 是 次三角多项式（即当 时，它们的 Fourier 系数才不为 0）。据此，通过把 和 的频率分成 个单位，就得到了两个三角多项式 和 ，次数分别为 和 。也就是说，令 和 。所以只要 在 时有非消失的 Fourier 系数， 这一项在 时就有非消失的 Fourier 系数。进而，因为 是 的对称中心，从而 是 的对称中心。下面考察部分和 。
+引理 3.2.4 通过之前的描述以及图 3.3，我们很容易得到结论。
+值得注意的是，当 时，算子 破坏了 的对称性，但对其余情况， 的性质还是很好的，要么取 要么取 0。
+最后，需得到一组收敛的正项级数 以及一组整数序列 ，它是迅速增长的，满足：
+(i) ,
+(ii) 当 时，。
+例如，令 ，容易验证，它们满足上述条件。
+（说明存在f连续但fourier级数不收敛）
+构造2
+du Bois-Reymond 在 1876 年的构造，基于如下事实: 在 上一致有界 (不依赖于 和 )。对于正整数 ,定义函数 取序列 并定义函数 显然 是 上的连续函数 (这里用到 的一致有界性和连续性)。对 ,考虑部分和 在 0 点的取值, 有 这表明 在 0 处不收敛!
+虽然光连续并不够，但是从Dini定理来看，连续离结论已经不远了。<br>Dini的推广<a data-tooltip-position="top" aria-label="01 Fourier > ^38b268" data-href="01 Fourier#^38b268" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/01-fourier.html#^38b268" class="internal-link" target="_self" rel="noopener nofollow">(Dini)</a>
+如果存在常数
+在处满足dini定理的可积性条件
+推论
+是上的周期连续函数.（为Lipsehitz连续函数）
+（*收敛还是一致收敛）
+有界单调，左右极限存在，不妨假设，在递增
+（当时）
+进而只需要考虑是否趋近于0，由于
+这又（利用和f的单调性）
+因此，因为 由于有界变差函数可以写成两个单调增函数的差, 更一般的我们有:Jordan定理
+在上，有界变差函数,都有
+若是连续的，则收敛是一致收敛的
+(在上面我们讨论了其在0左右的收敛性质，并且说明了其与的无关性（一致收敛），但我们没有讨论以外的收敛性质，其是否是一致收敛？）根据上面的讨论,我们只需要证明当 连续时,收敛是一致收敛。记显然 在 上一致连续（把两侧的分析折叠为一侧，方便直接计算）,并且也是有界变差函数 (是不是关于 的全变差与 无关)。我们需要证明趋于 0 的速度与 无关 (事实上只与 的变差有关),这里为了方便我们用 替代 。类似的,在 区间上,我们可以估计（上面一步对于g/sin(...)，变为分母相同和补偿项，分母相同的部分直接利用两点距离小于全变差，补偿项利用g的极大值）
+对 求和,可知先取 足够小,再取 足够大就表明收敛与 无关。Tip
+上面的证明过程类似可以说明 -Hölder 连续的函数的傅里叶级数也是一致收敛的，因为，可以被替换成
+Note 绝对收敛 绝对收敛
+(Bernstein) 上 -Holder 连续的周期函数 ，其 Fourier 级数绝对收敛（ 即 Lipschitz 连续函数）
+(Zygmund) Fourier 级数绝对收敛 证明: 将 周期延拓只整个实轴,根据逐点收敛结论,我们有特别的对 ,有对于固定的 是关于 的 -Hölder 连续函数,特别的其傅里叶级数一致收敛到自己。这样根据连续性有这里用到了Parseval's Identity
+For a function with Fourier seriesor in complex formthe following equality holds:Derivation (Complex Form):
+Let the partial sum be .
+Compute the norm of the differenceTherefore,As , the convergence of in implies:Thus, we obtain the equality:Generalization:
+For any two functions with Fourier coefficients :
+根据假设 可知存在常数 使得特别的我们得到不等式对正整数 ,取 ,我们得到最后用 Cauchy-Schwarz 不等式可以得到所以当 时有这就证明了 Bernstein 定理。
+对于 的情形,一个充分的条件是 是有界变差。将 周期延拓只整个实轴,根据逐点收敛结论,我们有同样的根据假设,存在常数 使得取 ,可以估计因而同样的有剩下的证明就跟 Bernstein 定理一样。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/01-fourier.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/01 Fourier.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Wed, 15 Oct 2025 00:19:25 GMT</pubDate></item><item><title><![CDATA[E01 分部积分法]]></title><description><![CDATA[定理（分部积分法 — 绝对连续与有界变差情形）
+设 和 是定义在闭区间 上的实函数，满足： 在 上绝对连续； 在 上有界变差 则 Lebesgue–Stieltjes 积分 存在，并且以下分部积分公式成立：
+其中 ，且 。
+特别地，若记 （几乎处处），则公式可写作： Proof
+第一步：准备工作 由 绝对连续，知 连续且有界， 存在几乎处处且属于 ，并且牛顿–莱布尼茨公式成立： 由 有界变差，可将其表示为两个单调递增函数之差：，因此只需对 单调递增的情况证明定理（由线性性可得一般情形）。 第二步：对 单调递增的情形证明
+设 单调递增。
+考虑区间 的任意分划： 考察和式： 直接计算： 中间两项 ，因此 这个值与分划 无关。
+第三步：极限论证
+我们有恒等式： 其中 当分划加细（）时，（因为 连续， 有界变差，Stieltjes 积分存在且等于该极限）。
+对于 ，由于 绝对连续，可将 写为 ，于是 定义阶梯函数 ，则 由于 有界，且当 时 在 的连续点成立（从而几乎处处，因为单调函数几乎处处连续），由有界收敛定理（）得 第四步：完成证明
+由 且 恒等于 ，令 得： 由于 ，且 ，即得 Tip
+绝对连续函数具有原函数并且绝对连续函数的积分就等于原函数之差，反之则不然
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/e01-分部积分法.html</link><guid isPermaLink="false">math/Mathematical Analysis/2nd/E01 分部积分法.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 14 Oct 2025 15:12:45 GMT</pubDate></item><item><title><![CDATA[03 Fourier]]></title><description><![CDATA[有限交换群,具有乘法结构，定义在上所有复值函数构成线性空间，在上定义
+如果是从到的映射，满足
+称是上的特征，常数函数1为单位特征或者平凡特征 表示单位圆（1-球面），即：Note
+有限交换群上的所有特征构成的单位正交基，如果非平凡
+证明简单:对全体特征成立，由于 要么恒等于1,即，要么有限交换群的结构定理
+有限交换群（阿贝尔群） 可分解为循环群的直积： 其中 （不变量条件），且 。
+另一种形式（初等因子分解）： 其中 是素数（可重复），。 若 是循环群
+设 ，生成元为 （加法群）。其特征是： 这里 是群同态。
+若 是直积
+设 ，其中 、 有限交换群。
+若 是 的特征， 是 的特征，则 是 的特征。事实上，。
+应用到分解式
+若
+取生成元： 生成 ，…， 生成 。
+任意元素 可写为： 对每个 -tuple ，其中 ，定义特征：
+，这给出 的所有 个特征。
+Dirichlet
+形如的素数有无穷多个，其中
+固定和，,考虑交换群
+对特征将延拓到整个整数集，称为Dirichlet特征，所有Dirichlet特征记为,在上考虑示性函数,
+考虑Fourier变换，
+对 ，我们有只要当时能证明左边趋近于正无穷，则证明了Dirichlet大定理
+（调和分析的重要想法：低频部分（ 小）贡献主要部分，振荡不剧烈。高频部分（）因快速振荡而抵消，贡献可忽略。进行分离即可）
+这里 是素数，求和对所有素数 。当 是平凡特征时利用欧拉公式可知注意到特别的当 时可知这样 Dirichlet 定理可以归结为如下结论Note
+如果 是非平凡 Dirichlet 特征，那么 对一般的特征 ，定义 －函数注意到 ，我们有一般的欧拉公式类似的取对数，只要 有界不为零，那么就可以得到上述定理。接下来我们主要讨论当 是非平凡特征时 的性质。
+由于 取复值，这里取对数需要特别说明。对于欧拉公式的右边，取对数可以用级数来定义对于 ，当 为非平凡特征时，注意到如下事实特别的存在常数 使得这样根据级数的 Abel 收玫判别准则可知 对任意 都收敛，同样的关于 的导数也收敛，并且对 内闭一致收敛。也就是说 关于 可导，特别的关于 是连续的。因而 存在有限。当 时候，显然 。这样 Dirichlet 定理的证明归结为证明 ，这同时也表明可以对 取对数。更加严格的方法是由 Abel 判别法可知关于 是指数衰减的，因而可以定义对数为了证明 ，首先注意到当 时候根据傅里叶变换公式特别的有当 为平凡特征时，根据定义可知这里 为 的所有质因子。而当 为非平凡特征时，根据 的可导性质可知存在常数 使得这样如果 ，并且 是复的非平凡特征 ，那么必定有矛盾！这表明当 是复的非平凡特征时， 。
+最后我们只需要证明当 取实的非平凡特征时 非零。对正整数 ，定义函数以及和我们用两种方式估计 。首先有由 Abel 求和公式可知这样可知对于第一项，我们有估计由于 ，这表明这里 是一个常数。这样我们有 的渐近表达式另外一方面，还可用如下方式估计 假设 ，那么当 时，根据特征的性质有这里 。这样对所有因子 求和可得由于 只能去 ，特别的有并且当 为偶数时有即是当 为完全平方数时，有 均为偶数。这就表明这就表明 。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/03-fourier.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/03 Fourier.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 14 Oct 2025 08:01:02 GMT</pubDate></item><item><title><![CDATA[E04 黎曼-勒贝格引理的推广]]></title><description><![CDATA[设 是一个度量空间， 是 中的一个函数族（即函数的集合）。
+紧集：如果 中的集合 的任意开覆盖都有有限子覆盖，则称 是紧集。在度量空间中，这等价于 是序列紧的（即任意序列都有收敛子序列且极限在 中）。
+相对紧集：如果集合 的闭包 是紧的，则称 是相对紧的。
+函数族的相对紧性：若函数族 是相对紧的，则 中的任意函数序列 ，都存在一个子序列 在 中收敛（极限函数 可能在 中，也可能在 中）
+Arzelà–Ascoli 定理：
+族 是相对紧的，当且仅当 满足以下条件： 一致有界：存在 ，使得对所有 和 ，有 。
+等度连续：对任意 ，存在 ，使得当 时，对所有 ，有 。 Proof
+证明分为充分性和必要性两部分。我们考虑空间 配备上确界范数 ，这是一个完备的度量空间。
+必要性：
+假设 是相对紧的，则其闭包 是紧集。
+3. 证明一致有界：紧集在度量空间中必然是有界集。因此，存在 ，使得对于所有 ，有 。由于 ，故对任意 和 ，有 。即 一致有界。
+4. 证明等度连续：由于 是紧集，对于任意给定的 ，存在有限个函数 ，使得 ，其中 是半径为 的开球。每个函数 在闭区间 上连续，从而一致连续。因此，对每个 ，存在 ，使得当 时，有 。取 。
+现在，对任意 ，存在某个 使得 ，即 。那么，对于任意满足 的 ，有： 由于 的选取不依赖于具体的 ，只依赖于有限的 ，因此 是等度连续的。
+充分性：
+假设 一致有界且等度连续。要证明 是紧集，由于 是度量空间，我们只需证明 是序列紧的。即，任取序列 ，需要找到在 中收敛的子序列。
+5. 考虑 中所有有理数的集合 ，它是一个可数稠密子集。
+6. 由于 一致有界，函数值域 对每个固定的 是有界集。首先，在 （ 中第一个有理数）处， 是有界数列，根据 Bolzano-Weierstrass 定理，存在收敛子列 。
+7. 考虑这个子列 在 （ 中第二个有理数）处的值，它仍然是有界数列。于是可以进一步取出子列 ，使得 也收敛。
+8. 重复此过程，对 中所有有理数进行对角线选取：定义子列 。这个序列 在 中的每一个有理点上都收敛。也就是说，我们定义了一个函数 ，使得 对所有 成立。
+9. 证明 在 上一致收敛：
+- 由等度连续性，对任意 ，存在 ，使得对任意 ，当 时，。
+- 用有限个开区间覆盖 ，每个区间长度小于 ，并在每个区间内选取一个有理点，记这些有理点的集合为 。
+- 由于 在每个 处收敛，存在 ，使得当 时，对所有 ，有 。
+- 对任意 ，它必落在某个开区间内，设该区间内的有理点为 ，则 。于是对于 ，有： 因此， 是一个一致柯西列。
+10. 因为 是完备的，所以一致柯西列 必然一致收敛到某个连续函数 。由于 且 是闭集，故 。
+由此，我们证明了 是序列紧的，从而是紧集。故 是相对紧的。
+Note
+定理：设 是一个相对紧的函数族（在 范数下）。那么： 特别地，对于正弦和余弦变换也有类似结果。
+Proof
+由于 是相对紧的，对于任意 ，存在有限个函数 使得： 其中 是以 为中心、 为半径的 －球。
+对于每个固定的 ，由经典 Riemann－Lebesgue 引理，存在 使得当 时： 令 。那么对于任意 ，存在某个 使得 ，于是当 时： 由于这对所有 成立，我们得到了一致收敛。
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e04-黎曼-勒贝格引理的推广.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/E04 黎曼-勒贝格引理的推广.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 14 Oct 2025 07:13:49 GMT</pubDate></item><item><title><![CDATA[E01 黎曼-勒贝格引理]]></title><description><![CDATA[黎曼-勒贝格引理 (Riemann-Lebesgue Lemma)
+设函数 在区间 上可积（黎曼可积或勒贝格可积），则 且 证明（黎曼可积情形）
+第一步：对特征函数证明引理成立
+考虑区间 上的特征函数 ，直接计算： 当 时，上式趋于 。
+第二步：对阶梯函数证明引理成立
+任何阶梯函数 可表示为特征函数的线性组合： 其中 为区间。于是： 由第一步知，当 时，每个积分项趋于 ，故整个表达式趋于 。
+第三步：对一般可积函数证明引理成立
+由于 在 上黎曼可积，对任意 ，存在阶梯函数 ，使得 又由第二步，存在 ，使得当 时， 于是当 时： 这就证明了 对于余弦函数的证明完全类似。证毕。
+<a data-href="E04 黎曼-勒贝格引理的推广" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e04-黎曼-勒贝格引理的推广.html" class="internal-link" target="_self" rel="noopener nofollow">E04 黎曼-勒贝格引理的推广</a>]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e01-黎曼-勒贝格引理.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/E01 黎曼-勒贝格引理.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 14 Oct 2025 06:51:41 GMT</pubDate></item><item><title><![CDATA[概率论公式]]></title><description><![CDATA[
+记号：
+描述：一次试验，成功概率为 。
+概率质量函数 (PMF)： 期望：
+方差： 记号： 或 描述： 次独立伯努利试验的成功次数。
+PMF： 期望：
+方差： 记号：
+描述：单位时间/空间内随机事件发生次数。
+PMF： 期望：
+方差：
+可加性：独立泊松变量之和仍为泊松，参数相加。 记号：
+描述：第一次成功所需的试验次数。
+PMF（版本1）： 期望：
+方差：
+无记忆性： 记号：
+描述：第 次成功所需的试验次数。
+PMF： 期望：
+方差： 记号：
+描述： 个产品中有 个次品，抽 个，抽到次品数。
+PMF： 期望：
+方差： 记号：
+描述：区间 上等可能。
+PDF： CDF： 期望：
+方差：
+例子： 是标准均匀分布。 记号：
+PDF： 标准正态：，PDF ，CDF 。
+期望：
+方差：
+线性变换：
+可加性：独立正态变量之和仍为正态。
+例子： 表示均值 20，方差 100（标准差 10）。 记号：
+描述：泊松过程中事件间隔时间。
+PDF： CDF： 期望：
+方差：
+无记忆性： 记号：
+参数：形状 ，尺度 （或速率 ）
+PDF： 期望：
+方差：
+特例： 时是指数分布； 时是卡方分布。 记号：
+描述： 个独立标准正态变量平方和。
+PDF： 期望：
+方差：
+可加性：独立卡方变量之和仍为卡方，自由度相加。 记号：
+PDF（定义在 ）： 期望：
+方差： 记号：
+参数：自由度 PDF： 期望： 时 ； 时 当 ，趋近于标准正态。 记号：
+参数：自由度 PDF（）： 期望： 时 与卡方关系：若 , 独立，则 。
+这样整合后，每个分布都包含了标准记号、参数解释和主要性质，方便你在笔记中统一查阅。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/概率论/概率论公式.html</link><guid isPermaLink="false">math/概率论/概率论公式.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 14 Oct 2025 03:39:16 GMT</pubDate></item><item><title><![CDATA[02 Fourier]]></title><description><![CDATA[
+空间是线性的Banach空间 （线性，具有范数（三角、正定、对称），完备）
+当时,如果有限，则Holder
+，互为对偶空间，
+Riesz定理
+一个映射 （或 ）称为 上的有界线性泛函，如果它满足： 线性：对任意 和标量 ，有 。
+有界性：存在常数 ，使得对任意 ，有 。
+所有 上的有界线性泛函构成的集合称为 的对偶空间，记为 。其上装备算子范数定理 (F. Riesz)
+对于任意一个有界线性泛函 ，存在唯一的函数 ，使得对每一个 ，都有： 并且，该函数 的 -范数正好等于泛函 的算子范数：反之，任意给定一个函数 ，由公式 所定义的映射 必然是 上的一个有界线性泛函，且满足 。 <a data-href="E03 Riesz定理" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e03-riesz定理.html" class="internal-link" target="_self" rel="noopener nofollow">E03 Riesz定理</a>Tip
+该定理建立了一个重要的等距同构： (Hilbert 空间情形)：此时 ，定理结论为 。这是希尔伯特空间自对偶性的体现，也是所有基于内积的理论（如傅里叶分析）的基础。
+：此时 ，定理结论为 。 的情形：定理不成立。 是一个比 复杂得多的空间，不能简单地用 函数来表示。
+σ-有限性的条件：此条件是保证表示函数 唯一性的关键。如果测度空间不是σ-有限的，定理的唯一性部分可能不成立。 是完备的赋范线性空间，在上定义内积
+，由Holder不等式，，
+（上内积的定义即满足双线性，对称性，正定性，且内积自然的诱导了一个范数）
+内积空间一定满足：
+Cauchy-Schitwaz: 平行四边形法则：
+Defi
+Hilbert空间是可分的完备的内积空间
+(如上的向量空间，上可测集E上的（平方可积函数）（类似上面定义），还有序列空间(满足，内积为)都是Hilbert空间)Hilbert的空间的基 满足称正交
+正交
+如果至多可数集两两正交，称之为正交系，如果的范数均为1，称为标准正交系
+若标准正交系的有限线性组合在中稠密，则称为标准正交基 Example
+中的，中的，中的，
+中的，，为Hermite多项式都为标准正交基
+Note
+给定为Hilbert空间上的标准正交系，则下面条件等价 为标准正交基
+如果 ，有Parseval等式， Proof
+证明: : 对任意 ,存在 使得 由于 两两正交,可得
+故而 ,这样 . 由于因而可知
+因而 为 中的 Cauchy 列,因而收敛到 ,考虑 . 可计算的
+由条件 (2) 可知 . 这就表明 . 由于
+因而可知 注意到
+这样便知 为标准正交基。
+Hilbert空间上的任意标准正交系，可做广义Fourier分解
+如果是标准正交基，则收敛到，并且满足Parseval恒等式
+上有标准正交基，
+（因为三角函数可以逼近连续函数，连续函数可以逼近任意函数）
+因此有Fourier变换
+，，
+且部分和收敛到.定理
+任何Hilbert空间都有标准正交基
+想法即Gram-Schmidt 正交化，取出空间里的可数稠密子集
+通过除以范数能把一组正交系自然的变成标准正交系，假设取出了是标准正交系，我们通过处理，如果正交化之后不为0，就把正交化之后的东西范数变1后添加进标准正交系，如此递推得到的能表示所有，由的稠密性得证。定理(Riesz)
+是Hilbert空间到上的线性映射，满足 证明：定义线性空间=，由条件知该空间线性且闭。
+我们可以试着去做垂直分解,，
+垂直分解的可行性自然的由的闭集性，如下正交分解
+对任意 ，我们可做唯一分解 证明：事实上只需要取 使得 取 使得 由平行四边形法则可知 这表明 为 Cauchy 列，因而收敛。由于 是闭的线性子空间，可知上面的结论成立。
+这样由 可知 故而 。
+如果，则结论自然成立，反之取使得
+，对进行垂直分解 考虑在上Note 称是等分布的
+简单的例子如，或者是都不是等分布的Weyl等分布判定准则
+在区间上，下面结论等价 等分布
+上的Riemann可积函数，有 有 2推1，取，2推3，取，下面证明1推2Proof
+由等分布定义知，对任意子区间，其特征函数满足：
+由于阶梯函数是特征函数的有限线性组合，故对任意阶梯函数有：
+对任意Riemann可积函数，由Riemann可积性，对任意，存在阶梯函数, 使得：
+且于是有：
+令，由阶梯函数的结果得：
+又因
+且
+由的任意性，即得： 而3推2，由于的三角函数满足2，又连续函数可由这样的三角函数一致逼近，知连续函数满足2，之后显然
+（Riemann可积不能改成Lebesgue可积因为我们需要的是简单函数的一致收敛，并非简单的测度或者范数或者逐点收敛）Example
+任给非零实数 ，任意的实数 ，我们令 （小数部分）。那么， 在 上等分布。
+根据 Weyl 判别准则，我们控制 的大小。如果令 ，我们要证明
+我们用积分来逼近求和：
+。
+根据 Lagrange 中值定理（对函数 的实部和虚部分别来做），对 ，存在依赖于 和 的常数 ，使得
+。
+从而，
+。
+下面我们估计积分项 （对于 和 的差别可以忽略，因为这是 -项）：
+。
+这其中后面拆开的两项中，左边一项是，来看右边的积分项
+通过将指数函数用 1 来控制，我们有
+。
+最终，我们证明了
+。
+由于 ，有 ，故
+。
+根据 Weyl 判据，我们就说明了 在 上等分布。推论 ，数列 的小数部分在 上等分布。
+Example
+任意给定 ，对任意的 ，我们定义
+。
+那么， 在 上不是等分布的。
+根据 Weyl 判别准则，我们估计 。我们令 ，现在用积分逼近求和 。
+根据 Lagrange 中值定理，对 ，存在依赖于 的常数 ，使得
+。
+所以，。
+下面我们来估计积分 ，而这个积分可以通过分部积分直接计算：
+。
+所以，。
+这个复数的模长是固定的 ，所以 。
+根据 Weyl 判据，我们就说明了 在 上不是等分布的。，加法构成交换群，其上定义的复值函数构成维线性空间，
+，在上定义内积，
+特别的构成一组单位正交基
+定义Fourier变换
+其中
+定义卷积，
+在差常数意义下，即Fourier变换保持内积，
+Parseval恒等式，
+在频率空间来看，卷积就是正常的乘法,
+由3可以看出来,
+Note
+在自然数中的上密度
+若，那么A中一定包含3项等差数列，即存在
+引理
+存在常数 （ 就可以），使得对任意给定 ，只要 ，对任意的 ，如果 ，那么 中必然有 3 项的等差数列。
+引理证明思路：设为满足下列条件的最小自然数
+存在 ， 使得，且存在 ， 使A不含三项等差数列
+记 ，
+如果 。
+考虑 ，。 至少有一个区间，不妨假设 ，使得 ，且 。 令 ，，则 且无三项等差数列，但 且 ，这与 的最小性矛盾。 如果 故
+故存在
+对这样的 ，且 ，其中 。
+取 ，定义集合 满足 。
+有 ，且计算傅里叶系数：由 ，得由于对,有这里用到了
+设 ，则因此存在 ，使得注意到且 ，故设 ，至多为两个等差数列的无交并，则 。
+将 划分为两部分 ，不妨设
+若 ，则而
+所以
+因此在 的某个长等差数列上， 的密度 ，完成的递减，则矛盾。
+而若,同样有中至少一个的密度大于等于Tao and Green
+素数存在任意长的等差数列
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/02-fourier.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/02 Fourier.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 13 Oct 2025 02:25:48 GMT</pubDate></item><item><title><![CDATA[4.e3 群作用]]></title><description><![CDATA[构造的同态：
+，其中 核与像： 第一同构定理：
+构造的同态：
+，其中 核的性质： 寻找正规子群：
+若 且 ，则： 且 ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.e3-群作用.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.e3 群作用.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 11 Oct 2025 08:24:19 GMT</pubDate></item><item><title><![CDATA[4.e4 index为最小素因子的群一定正规]]></title><description><![CDATA[Note
+如果是有限群的子群，且指数，其中是的最小素因子，则
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.e4-index为最小素因子的群一定正规.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.e4 index为最小素因子的群一定正规.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 11 Oct 2025 08:20:10 GMT</pubDate></item><item><title><![CDATA[4.5 Sylow's theorem]]></title><description><![CDATA[Theorem 18 (Sylow's Theorem)<a rel="noopener nofollow" class="external-link is-unresolved" href="" target="_self"></a>
+Let be a group of order , where is a prime not dividing .
+(1) Sylow -subgroups of exist, i.e., .
+(2) If is a Sylow -subgroup of and is any -subgroup of , then there exists such that , i.e., is contained in some conjugate of . In particular, any two Sylow -subgroups of are conjugate in .
+(3) The number of Sylow -subgroups of is of the form , i.e., . Further, is the index in of the normalizer for any Sylow -subgroup , hence . 考虑在里面可由共轭到达的所有群，这些群的集合记为 考虑在该群下的作用（conjugation），把S分成了若干共轭类
+不妨设的一个代表元恰好是，则
+Tip
+Let . If is any p-subgroup of , then . 如果，意味着 ，最后与矛盾. 运用数学归纳法，如果的中心被p整除，考虑陪集即可，反之，如果不被p整除，我们能找到一个conjugacy class，个数大于一且不被整除，意味着找到了一个比小且p的幂次相同的群，证毕
+把取成某个用上面的步骤即可
+Corollary 20.
+Let be a Sylow -subgroup of . Then the following are equivalent: is the unique Sylow -subgroup of , i.e., . is normal in . is characteristic in .
+All subgroups generated by elements of -power order are -groups, i.e., if is any subset of such that is a power of for all , then is a -group. <br><a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义/特征子群" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义/特征子群">#定义/特征子群</a>
+这里给出了一个得出Characteristic subgroup的方式 Sylow定理可以与素数阶元素的计数结合使用来产生正规子群。<br>
+对于Sylow-p子群恰为order=p的子群时，每个Sylow-p子群会对应p-1个阶为p的元素，且Sylow-p子群两两只会在identity处相交，因此，Sylow群越多（<a data-tooltip-position="top" aria-label="4.5 Sylow's theorem > ^b56ad8" data-href="4.5 Sylow's theorem#^b56ad8" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.5-sylow's-theorem.html#^b56ad8" class="internal-link" target="_self" rel="noopener nofollow">corollary 20</a>告诉我们，Sylow-p子群唯一等价于该Sylow-p子群normal），可以被计数的元素就越多，也许会超出群元素个数导出矛盾，这可以反推出normal性质 proposition
+如果是的一个Sylow-p子群，则 这是明显的，因为恰好是以共轭为group action的时候，能够到达的的群的个数，即Sylow-p子群的个数 Sylow定理可以用来探索群的结构 Prob 54
+Prove the following classification: if is a finite group of order where the 's are distinct primes such that does not divide for all and , then is cyclic. Proof
+首先，若是abelian的，我们只需考虑满足阶为，由交换性，的阶数在和的阶数的最大公因数和最小公倍数之间,考虑乘到即可，为该元素为生成元构成的循环群。
+若非abelian，由引理知是非simple的，则存在的非平凡子群是normal的，考虑作用在群上(conjugacy)，则的子群同构于，因此的某个大于一的因数整除 ，这与命题矛盾，因此该请况不成立，证毕
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.5-sylow's-theorem.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.5 Sylow's theorem.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 11 Oct 2025 06:27:16 GMT</pubDate></item><item><title><![CDATA[5.4 direct products]]></title><description><![CDATA[在接下来的部分我们使用以下记号 <a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义">#定义</a> 这是一种衡量和差距的工具，称为交换子（commutator）
+而上面的称为交换子子群(commutator subgroup)Proposition 7: Properties of Commutators and the Derived Subgroup
+Let be a group, let and let . Then (in particular, if and only if ). if and only if . for any automorphism of , char and is abelian.
+即自同构交换子依旧为交换子（我们熟悉很多自同构） is the largest abelian quotient of in the sense that if and is abelian, then . Conversely, if , then and is abelian. <br>
+If is any homomorphism of into an abelian group , then factors through i.e., and the following diagram commutes.
+<img alt="屏幕截图 2025-09-05 173647.png" src="./https://hhhhhyx142857.github.io/Obsidian/images/屏幕截图-2025-09-05-173647.png" target="_self"> ^6dfbf4<br>
+<a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义/特征子群" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义/特征子群">#定义/特征子群</a> 换位子群是特征的
+并不一定要算出所有commutator，才能推出，我们可以使用性质四来往小逼近commutator subgroup的范围，也可以只找出一些commutator和他们的生成群往大逼近
+对交换子使用conjugation（常见自同构）依然为交换子
+Proposition 8: Product of Subgroups
+Let and be subgroups of the group . The number of distinct ways of writing each element of the set in the form , for some and is . In particular, if , then each element of can be written uniquely as a product , for some and . 这是简单的，只需要考虑的解的个数就好了。Theorem 9: Internal Direct Product
+Suppose is a group with subgroups and such that and are normal in , and . Then .<br>
+<a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义">#定义</a>
+此时称为the internal direct product of and （内部直积）而称为the external direct product of and （外部直积）.虽然群上是同构的，他们的视角和构造方式完全不同
+<br>自然地，由且(由<a data-tooltip-position="top" aria-label="5.4 direct products > ^6dfbf4" data-href="5.4 direct products#^6dfbf4" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/5.4-direct-products.html#^6dfbf4" class="internal-link" target="_self" rel="noopener nofollow">5.4 prop7.(2)</a>），知
+即与的元素交换，.证毕
+在这里与 ，一个是群内部的新结构，一个是构造出来的新群，可以理解为把外部直积的新群联系到某个已知群的子群的手段（进行直积的拆解），也是本章的重要内容。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/5.4-direct-products.html</link><guid isPermaLink="false">math/abstract algebra/group theory/5.4 direct products.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 11 Oct 2025 06:11:31 GMT</pubDate><enclosure url="./https://hhhhhyx142857.github.io/Obsidian" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="./https://hhhhhyx142857.github.io/Obsidian"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5.1-3 直积]]></title><description><![CDATA[Definition（Direct Product）
+Let be any nonempty index set and let be a group for each . The direct product of the groups is the set (the Cartesian product of the 's) with a binary operation defined as follows: if and are elements of , then their product in is given by$$
+\left( \prod{i \in I} a_i \right) \left( \prod{i \in I} bi \right) = \prod{i \in I} (a_i \star_i b_i)
+G \cong \mathbb{Z}^t \times Z{m_1} \times Z{m2} \times \cdots \times Z{mu},
+$$ where and satisfy (a) and (b) (i.e., , for all and $m{i+1} \mid m_i$ for ), then , and for all .
+Definition. The integer in Theorem 3 is called the free rank or Betti number of and the integers are called the invariant factors of . The description of in Theorem 3(1) is called the invariant factor decomposition of . Definition
+Free means 这是主理想整环上有限生成模的结构定理的直接推论
+Torsion element is a Torsion element of a group means there exists a n s.t. All torsion element consist of a group called torsion group, denote as <a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义">#定义</a> ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/5.1-3-直积.html</link><guid isPermaLink="false">math/abstract algebra/group theory/5.1-3 直积.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 11 Oct 2025 03:42:52 GMT</pubDate></item><item><title><![CDATA[xt1009]]></title><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/习题课/xt1009.html</link><guid isPermaLink="false">math/abstract algebra/习题课/xt1009.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 09 Oct 2025 10:56:04 GMT</pubDate></item><item><title><![CDATA[Class 1009]]></title><description><![CDATA[Note
+Let be a group acting on two sets and . We say a map is -equivariant if Note Let be a group acting on a set . Then (as sets with -action).
+For each acts transitively on , we have Summing up this, we have ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/class-1009.html</link><guid isPermaLink="false">math/abstract algebra/group theory/Class 1009.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 09 Oct 2025 08:28:33 GMT</pubDate></item><item><title><![CDATA[E03 Riesz定理]]></title><description><![CDATA[设 是一个Hilbert空间（完备的内积空间），其对偶空间（所有连续线性泛函的集合）记为 。
+对于任意一个连续线性泛函 ，存在唯一的向量 ，使得对所有的 ，都有：|\phi|{\mathcal{H}^*} = |g|{\mathcal{H}}\left\langle f - \frac{\phi(f)}{\phi(h)}h, h \right\rangle = 0
+$$ 重新整理上式： 令 ，则 对任意 成立。证得存在性。 假设存在 都满足 对所有 成立。
+则 对所有 成立。
+特别地，取 ，则有 。
+故 。证得唯一性。 由 Cauchy-Schwarz 不等式： 所以 。
+另一方面，取 ： 根据算子范数定义 ，有： 综上，。
+Riesz表示定理建立了一个等距同构：这意味着：
+每个连续线性泛函 都唯一地对应一个“测试向量” 。
+泛函 作用在任意向量 上的效果，就是 和 做内积。
+泛函的范数 就等于这个代表元 的范数 。
+定理：设 是一个 -有限的测度空间，， 满足 。则对任意有界线性泛函 ，存在唯一的 ，使得且 。假设存在 都满足表示公式。令 ，则取 。由于 ，故 。代入得所以 a.e.，即 a.e.。唯一性得证。对每个可测集 ，定义由于 是线性的且 （因为 ）， 是良定义的。事实上， 是一个带符号测度，且若 ，则 a.e.，故 ，即 。由 ，存在函数 使得即对任意简单函数 ，由线性性，现在定义函数由于 ，。计算：另一方面，因此，令 ，则令 ，由单调收敛定理得再证反向不等式：对任意 ，由 Hölder 不等式，故 。综上，。对任意 ，存在简单函数序列 in 。由 的连续性，最后一步由 Hölder 不等式保证（因为 in 且 ）。设 ，其中 。对每个 ，考虑限制泛函 。由有限测度情形的证明，存在 使得且 。由唯一性，在 上 a.e.，故可定义 使得 。由单调收敛定理，对任意 ，由控制收敛定理，同理可证 。由 Hölder 不等式， 是 上的有界线性泛函，且 。为证 ，取则 ，且故 ，从而 。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e03-riesz定理.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/E03 Riesz定理.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 22 Sep 2025 02:22:27 GMT</pubDate></item><item><title><![CDATA[E02 Stone-Weierstrass定理]]></title><description><![CDATA[Stone-Weierstrass 定理“解决了“一个函数空间中的哪些子集可以通过线性组合和乘积（即构成一个代数）来一致逼近该空间中的所有函数”这个根本性问题。简单来说，定理表明：在一个“良好”的紧致空间（比如一个闭区间）上，如果你有一个函数代数，它能够“区分”空间中的不同点并且包含常数函数，那么这个代数在整个连续函数空间中就是一致稠密的。
+这意味着，该代数中的函数可以用来以任意高的精度一致逼近任何连续函数。设： 是一个紧致 Hausdorff 空间（例如，闭区间 、圆周、球面等）。 是 上所有实值连续函数构成的空间，赋予上确界范数（即 ）。 是 的一个子代数（即 对加法、标量乘法和函数乘法封闭）。
+如果 满足以下两个条件：
+分离点：对于 中任意两个不同的点 ，存在一个函数 ，使得 包含常函数：代数 包含常数函数 （即 ）
+那么， 在 中是一致稠密的。即，对于任意函数 和任意 ，都存在一个函数 ，使得复值函数版本：对于复值连续函数空间 ，定理还需增加一个条件：
+3. 自共轭：如果 ，那么其复共轭 。设 为所有以 为周期的连续函数 （或 ）构成的空间，赋予范数 。若 是 的一个子代数，且满足：
+分离点：对任意 ，，存在 使得 。
+不消失（对于实函数情形）：对任意 ，存在 使得 。
+包含常数函数：。
+（注：若 是复函数代数，则还需满足自共轭条件：若 ，则其复共轭 。）
+则 在 中一致稠密。即，对任意 及任意 ，存在函数 ，使得 最经典的应用：
+三角函数系 生成的（实）代数，或指数函数系 生成的（复）代数，满足上述所有条件。因此，任一周期连续函数的三角多项式逼近必一致收敛，且任何以 为周期的连续函数都可以被三角多项式一致逼近。这是傅里叶分析的理论基石之一。 Stone-Weierstrass 定理最著名的特例就是Weierstrass 逼近定理：
+空间：（一个闭区间）。
+子代数： 为所有多项式函数构成的代数。
+验证条件： 分离点：多项式 就能区分 上的任何两个不同点。
+包含常函数：常数函数 也是一个多项式。 结论：任何闭区间 上的连续函数都可以被多项式一致逼近。
+这就是原始的 Weierstrass 逼近定理，现在它只是 Stone-Weierstrass 定理的一个简单推论。
+<a data-href="E01 Weistrass逼近定理" href="./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/1st/e01-weistrass逼近定理.html" class="internal-link" target="_self" rel="noopener nofollow">E01 Weistrass逼近定理</a>]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/e02-stone-weierstrass定理.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/E02 Stone-Weierstrass定理.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 16 Sep 2025 12:07:38 GMT</pubDate></item><item><title><![CDATA[E01 Weistrass逼近定理]]></title><description><![CDATA[设 是定义在闭区间 上的连续函数。则对于任意 ，存在一个多项式 ，使得对于所有 ，有：即，连续函数可以被多项式一致逼近。不失一般性，我们考虑区间 （通过简单的线性变换，任何区间 都可以映射到 ）。对于 ，定义其 次Bernstein多项式为：我们的目标是证明：当 时， 在 上一致收敛于 。定义Bernstein函数：。它们具有以下关键性质：
+非负性：对任意 ，有 。
+单位分解：。（这由二项式定理 保证）
+矩估计： 由于 在闭区间 上连续，因此它一致连续且有界。设 。对于任意给定的 和 ，我们将求和指标 分为两部分： （靠近 的项） （远离 的项）
+现在估计误差：我们分别处理这两个和式： 对于 ：因为 ，由 的一致连续性，对于任意 ，存在 ，使得当 时，有 。因此， 对于 ：因为 有界，。我们需要估计 的大小。利用chebyshev不等式的思想： 利用基函数的矩性质： 代入上式：c 由于在 上，，所以： 因此， 将两部分合并：现在，先选择 使得由一致连续性得到的第一项有 。然后，选择 足够大，使得当 时，有 。因此，对于所有 和所有 ，有：这表明 在 上一致收敛于 。而 是一个 次多项式，定理得证。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/1st/e01-weistrass逼近定理.html</link><guid isPermaLink="false">math/Mathematical Analysis/1st/E01 Weistrass逼近定理.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 16 Sep 2025 12:04:13 GMT</pubDate></item><item><title><![CDATA[恒同逼近核]]></title><description><![CDATA[恒同逼近核的 收敛
+如果 为恒同逼近,那么对任意可积函数 ,有 可积,并且 \mathop{\lim }\limits{{\varepsilon \rightarrow 0}}\left( {{K}{\varepsilon } * f}\right) \left( x\right) = f\left( x\right) .]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/恒同逼近核.html</link><guid isPermaLink="false">math/Mathematical Analysis/2nd/恒同逼近核.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 16 Sep 2025 11:31:21 GMT</pubDate></item><item><title><![CDATA[4.e2 一个错误的想法（幂零类）]]></title><description><![CDATA[Note
+If is cyclic, then Failure
+If is abelian， is actually Nilpotent group of class 2(幂零类为2的幂零群)，not abelian group but "almost abelian".
+设 是一个群。递归地定义其下中心序列 (Lower Central Series)：如果存在一个正整数 ，使得：则称 为一个幂零群 (Nilpotent Group)。满足上述条件的最小正整数 ，称为群 的幂零类。
+幂零类的大小描述了一个群距离“Abel群”的远近程度。群 的幂零类为 ，当且仅当其下中心序列在 步时首次达到平凡群：且对于所有 ，有 。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.e2-一个错误的想法（幂零类）.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.e2 一个错误的想法（幂零类）.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 15 Sep 2025 11:53:30 GMT</pubDate></item><item><title><![CDATA[5.5 semidirect product]]></title><description><![CDATA[Semidirect products
+设 和 为群， 是一个同态。用 表示由 确定的 在 上的（左）作用。令 为所有有序对 的集合，其中 , ，并在 上定义如下乘法: 此乘法使 构成一个群，其阶为 。
+集合 和 是 的子群，并且映射 () 和 ()分别是这些子群到群 和 的同构： 对所有 和 ，有 。 定义的来历？
+之前定义直积的时候我们可以把直积的两个群看成新群的子群，因此，直积本质上也是由两个交为1的正规子群、相乘而得，这里附加的条件实际上是与交换，那么在不交换的时候，定义是否还成立呢？
+设 和 是群 的子群，满足：
+(a) (但 不一定是 的正规子群)，且
+(b) 。
+此时仍有结论： 是 的子群，并且由<a data-href="5.4 direct products" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/5.4-direct-products.html" class="internal-link" target="_self" rel="noopener nofollow">5.4 direct products</a>的proposition8， 中的每个元素可以唯一地表示为乘积 ，其中 , 。为了使构造的集合还具有群结构，我们首先来看如何将它们的乘积（在 中）写成相同的形式：其中 (因为 )，且 。
+上述的要求建立在我们已经提前拥有了G的群结构，并非在构造一个新群，考虑把、视为独立的两个群，由上述乘法的规律，进行仿照就得到了我们定义。
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/5.5-semidirect-product.html</link><guid isPermaLink="false">math/abstract algebra/group theory/5.5 semidirect product.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 07 Sep 2025 14:23:24 GMT</pubDate></item><item><title><![CDATA[4.4 The Class Equation]]></title><description><![CDATA[Proposition: Group Action Equivalence Relation
+Let be a group acting on the nonempty set . The relation on defined by if and only if for some is an equivalence relation. For each , the number of elements in the equivalence class containing is , the index of the stabilizer of .
+Proof
+Equivalence Relation: Reflexive: for all (by axiom 2 of group actions), so .
+Symmetric: If , then for some . Then , so .
+Transitive: If and , then and for some . Then , so . Size of Equivalence Class:
+Let be the equivalence class of . Define a map: by . Well-defined and Injective: if and only if if and only if .
+Surjective: For any coset , .
+Thus is a bijection, so . Proposition: The Class Equation
+Let be a finite group and let be representatives of the distinct conjugacy classes of not contained in the center . Then
+.
+Proposition: Normalizer/Centralizer Embedding
+If is a subgroup of , then is isomorphic to a subgroup of .
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.4-the-class-equation.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.4 The Class Equation.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 06 Sep 2025 14:01:41 GMT</pubDate></item><item><title><![CDATA[1.1 Isomorphisms]]></title><description><![CDATA[Proposition: Index Multiplication
+Let , then .
+Proposition: First Isomorphism Theorem
+If is a homomorphism of groups, then and
+.
+Proposition: Second Isomorphism Theorem
+Let be a group, let and be subgroups of and assume .
+Then is a subgroup of , , and
+.
+Proposition: Third Isomorphism Theorem
+Let be a group and let and be normal subgroups of with . Then and .
+Proposition: Lattice Isomorphism Theorem
+Let be a group and let be a normal subgroup of . Then there is a bijection from the set of subgroups of which contain onto the set of subgroups of . In particular, every subgroup of is of the form for some subgroup of containing (namely, its preimage in under the natural projection homomorphism from to ).This bijection has the following properties: for all with and , if and only if ,
+if , then ,
+,
+, and if and only if . ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/1.1-isomorphisms.html</link><guid isPermaLink="false">math/abstract algebra/group theory/1.1 Isomorphisms.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 10:58:05 GMT</pubDate></item><item><title><![CDATA[1.2 Jordan-Holder Theorem]]></title><description><![CDATA[Proposition: Jordan-Hölder Theorem
+Let be a finite group with . Then has a composition series and
+The composition factors in a composition series are unique, namely, if and are two composition series for , then and there is some permutation of such that Proof Sketch (Inductive Argument)
+Base Case (Lemma): If , the proposition holds. Assume . Let be the smallest index such that .
+Argue that or (otherwise contradicts the simplicity of ).
+Case analysis on : If , then and , leading to , forcing and establishing the bijection.
+If , then , again forcing . Inductive Step (Lemma): If the proposition holds for series where , then it holds for . Assume and . Define .
+Case 1: . Then , and the result follows by applying the inductive hypothesis to the truncated series (length ).
+Case 2: . Then and , .
+Refine both series through . By the inductive hypothesis (applicable since the lengths of the series from to , to , and to are all ), the multiplicities and isomorphisms of factors are preserved.
+This allows constructing a bijection between the factors of the original series and via the refined series through the intersection . ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/1.2-jordan-holder-theorem.html</link><guid isPermaLink="false">math/abstract algebra/group theory/1.2 Jordan-Holder Theorem.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 09:15:51 GMT</pubDate></item><item><title><![CDATA[4.e1 Cauchy's theorem]]></title><description><![CDATA[Cauchy‘s theorem If is a finite group and is a prime number dividing the order of , then contains an element of order .
+i.e., has a subgroup of order .
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.e1-cauchy's-theorem.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.e1 Cauchy's theorem.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 08:00:03 GMT</pubDate></item><item><title><![CDATA[4.6 SIMPLICITY]]></title><description><![CDATA[Theorem 24. is simple for all .
+steps:
+if is a simple subgroup of , we know Hence and for all and , either or .
+Thus every permutation doesn't fix any element.
+Using conjugacy to create two different permutation that permute a fixed element to the same element，it create a contradiction with step 1.
+It's easy and just consider that has a cycle more than 3 or all cycle are 2-cycle.
+as for infinity if there exists a chain of subgroups such that and each is simple, then is simple. ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.6-simplicity.html</link><guid isPermaLink="false">math/abstract algebra/group theory/4.6 SIMPLICITY.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 07:59:45 GMT</pubDate></item><item><title><![CDATA[热、光、近代物理]]></title><description><![CDATA[系统各部分的宏观性质长时间不发生变化的状态称为平衡态
+由初始的非平衡状态达到平衡态所经历的时间被称为系统的弛豫时间
+力学平衡（无物质交换）化学平衡（浓度相同没有物质流动）热平衡（没有能量流动）
+三平衡都满足就是热平衡温度不同的物体可以通过接触而热平衡
+热力学第0定律：AB平衡，BC平衡则AC平衡
+温标：温度的数值表示法
+测温物质：温标制定的标准第三者物体
+测温属性：标定温度的物理量称为测温属性
+固定标准点：用相对标准点的变化来标定温度
+（气态常使用体积、压强，固态使用电阻、发光强度等）
+经验温标：水银在0（冰和盐水混合物）-212°F（水的沸点）之间的体积变化
+理想气体温标：不同种类气体在利用压强测温时带来的误差极小，因此以气体作为测温物质
+体积不变时， 称为等体压强系数,为0°C时的压强（查理定律）
+由p=0时后对应的温度被认为是0K(水在三相点，冰水水蒸气共存且平衡的状态时的温度为273.16K)
+热力学温标：不依赖于任何测温物质，水的三相点温度定义为273.16K
+国际实用温标：国际的约定俗成压强p，体积V，温度T不完全独立
+处于平衡态的热力学系统的状态参量之间满足的一定函数关系称为该热力学系统的状态方程
+可以由独立变化的状态参量完全确定的状态参量称为热力学系统的态函数
+体膨胀系数(恒温)、等温压缩系数、等体压强系数 1. 体膨胀系数 (α)2. 等温压缩系数 (κₜ)3. 等体压强系数 (β)由上面知道
+称为普适气体常量
+微观粒子之间可以近似认为无除碰撞外的相互作用
+理想气体是满足下述条件的气体（微观下）：
+组成气体的微观粒子都是质点，并遵从牛顿力学规律；
+粒子之间除碰撞的瞬间外无相互作用；
+粒子之间的碰撞及粒子与容器壁之间的碰撞都是完全弹性碰撞。
+玻尔兹曼常量：描述一个分子/粒子统计平均行为
+,是非相对论下粒子运动动能，故
+说明温度的本质是微观粒子无规则运动的剧烈程度分子并非是质点且具有相互作用
+体积实则为，因为分子相互作用的压强的修正量 利用p趋近正无穷来知道
+计算知道，为气体分子体积
+=，这里实质是分子间相互吸引力形成的内压强
+，、分别是分子的体积和结合能，其中a,b是对不同的实际气体的经验参数而非普适的]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/普物/热、光、近代物理.html</link><guid isPermaLink="false">普物/热、光、近代物理.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 13 Sep 2025 07:50:16 GMT</pubDate></item><item><title><![CDATA[Weierstrass多项式逼近定理]]></title><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/weierstrass多项式逼近定理.html</link><guid isPermaLink="false">math/Mathematical Analysis/2nd/Weierstrass多项式逼近定理.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 11 Sep 2025 11:24:53 GMT</pubDate></item><item><title><![CDATA[20250911]]></title><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/习题课/20250911.html</link><guid isPermaLink="false">math/abstract algebra/习题课/20250911.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 11 Sep 2025 11:24:48 GMT</pubDate></item><item><title><![CDATA[代数学]]></title><description><![CDATA[应用基础高代、抽代同调代数交换代数代数数论算数几何代数几何代数表示论代数学（一般研究有限生成和有限维）]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/代数学.html</link><guid isPermaLink="false">math/abstract algebra/代数学.canvas</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 11 Sep 2025 11:00:30 GMT</pubDate></item><item><title><![CDATA[2025fall schedule]]></title><description><![CDATA[分数占比：HW50%（50题）+期末50%(可能有期中)]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/real-analysis/2025fall-schedule.html</link><guid isPermaLink="false">math/Real Analysis/2025fall schedule.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Wed, 10 Sep 2025 07:14:14 GMT</pubDate></item><item><title><![CDATA[未命名]]></title><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/01-03-quotient-,homomorphism/未命名.html</link><guid isPermaLink="false">math/abstract algebra/group theory/01-03 quotient ,homomorphism/未命名.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 08 Sep 2025 10:55:25 GMT</pubDate></item><item><title><![CDATA[2025fall 代数学实验班]]></title><description><![CDATA[
+Describe symmetry,uniformly
+Compare symmetries in different context
+Extract the most foundamental common structure in all case
+Example
+Pell's equation: square free &gt;1.
+general solvution comes from:
+from Example
+Elliphic curve :
+solves from an abelian group looks like ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/2025fall-代数学实验班.html</link><guid isPermaLink="false">math/abstract algebra/2025fall 代数学实验班.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 08 Sep 2025 10:54:59 GMT</pubDate></item><item><title><![CDATA[收敛方式]]></title><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/2nd/收敛方式.html</link><guid isPermaLink="false">math/Mathematical Analysis/2nd/收敛方式.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 08 Sep 2025 09:23:58 GMT</pubDate></item><item><title><![CDATA[00 semester schedule]]></title><description><![CDATA[考试占比：40%+30%+30%
+内容安排：1.Fourier级数（期中）2.分布理论 3.Sobolev空间和嵌入定理]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/mathematical-analysis/3rd/00-semester-schedule.html</link><guid isPermaLink="false">math/Mathematical Analysis/3rd/00 semester schedule.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Mon, 08 Sep 2025 05:40:38 GMT</pubDate></item><item><title><![CDATA[5.5 semidirect product]]></title><description><![CDATA[Semidirect products
+设 和 为群， 是一个同态。用 表示由 确定的 在 上的（左）作用。令 为所有有序对 的集合，其中 , ，并在 上定义如下乘法: 此乘法使 构成一个群，其阶为 。
+集合 和 是 的子群，并且映射 () 和 ()分别是这些子群到群 和 的同构： 对所有 和 ，有 。 定义的来历？
+之前定义直积的时候我们可以把直积的两个群看成新群的子群，因此，直积本质上也是由两个交为1的正规子群、相乘而得，这里附加的条件实际上是与交换，那么在不交换的时候，定义是否还成立呢？
+设 和 是群 的子群，满足：
+(a) (但 不一定是 的正规子群)，且
+(b) 。
+此时仍有结论： 是 的子群，并且由<a data-href="5.4 direct products" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/05-direct-and-semidirect-products-and-abelian-groups/5.4-direct-products.html" class="internal-link" target="_self" rel="noopener nofollow">5.4 direct products</a>的proposition8， 中的每个元素可以唯一地表示为乘积 ，其中 , 。为了使构造的集合还具有群结构，我们首先来看如何将它们的乘积（在 中）写成相同的形式：其中 (因为 )，且 。
+上述的要求建立在我们已经提前拥有了G的群结构，并非在构造一个新群，考虑把、视为独立的两个群，由上述乘法的规律，进行仿照就得到了我们定义。
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/05-direct-and-semidirect-products-and-abelian-groups/5.5-semidirect-product.html</link><guid isPermaLink="false">math/abstract algebra/group theory/05 Direct and Semidirect Products and Abelian Groups/5.5 semidirect product.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 07 Sep 2025 14:23:24 GMT</pubDate></item><item><title><![CDATA[5.1-3 直积]]></title><description><![CDATA[Definition（Direct Product）
+Let be any nonempty index set and let be a group for each . The direct product of the groups is the set (the Cartesian product of the 's) with a binary operation defined as follows: if and are elements of , then their product in is given by$$
+\left( \prod{i \in I} a_i \right) \left( \prod{i \in I} bi \right) = \prod{i \in I} (a_i \star_i b_i)
+G \cong \mathbb{Z}^t \times Z{m_1} \times Z{m2} \times \cdots \times Z{mu},
+$$ where and satisfy (a) and (b) (i.e., , for all and $m{i+1} \mid m_i$ for ), then , and for all .
+Definition. The integer in Theorem 3 is called the free rank or Betti number of and the integers are called the invariant factors of . The description of in Theorem 3(1) is called the invariant factor decomposition of . Definition
+Free means 这是主理想整环上有限生成模的结构定理的直接推论
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/05-direct-and-semidirect-products-and-abelian-groups/5.1-3-直积.html</link><guid isPermaLink="false">math/abstract algebra/group theory/05 Direct and Semidirect Products and Abelian Groups/5.1-3 直积.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 07 Sep 2025 13:52:13 GMT</pubDate></item><item><title><![CDATA[5.4 direct products]]></title><description><![CDATA[在接下来的部分我们使用以下记号 <a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义">#定义</a> 这是一种衡量和差距的工具，称为交换子（commutator）
+而上面的称为交换子子群(commutator subgroup)Proposition 7: Properties of Commutators and the Derived Subgroup
+Let be a group, let and let . Then (in particular, if and only if ). if and only if . for any automorphism of , char and is abelian.
+即自同构交换子依旧为交换子（我们熟悉很多自同构） is the largest abelian quotient of in the sense that if and is abelian, then . Conversely, if , then and is abelian. <br>
+If is any homomorphism of into an abelian group , then factors through i.e., and the following diagram commutes.
+<img alt="屏幕截图 2025-09-05 173647.png" src="./https://hhhhhyx142857.github.io/Obsidian/images/屏幕截图-2025-09-05-173647.png" target="_self"> 并不一定要算出所有commutator，才能推出，我们可以使用性质四来往小逼近commutator subgroup的范围，也可以只找出一些commutator和他们的生成群往大逼近
+对交换子使用conjugation（常见自同构）依然为交换子
+Proposition 8: Product of Subgroups
+Let and be subgroups of the group . The number of distinct ways of writing each element of the set in the form , for some and is . In particular, if , then each element of can be written uniquely as a product , for some and . 这是简单的，只需要考虑的解的个数就好了。Theorem 9: Internal Direct Product
+Suppose is a group with subgroups and such that and are normal in , and . Then .<br>
+<a href="./https://hhhhhyx142857.github.io/Obsidian?query=tag:定义" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#定义">#定义</a>
+此时称为the internal direct product of and （内部直积）而称为the external direct product of and （外部直积）.虽然群上是同构的，他们的视角和构造方式完全不同
+<br>自然地，由且(由<a data-tooltip-position="top" aria-label="5.4 direct products > ^6dfbf4" data-href="5.4 direct products#^6dfbf4" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/05-direct-and-semidirect-products-and-abelian-groups/5.4-direct-products.html#^6dfbf4" class="internal-link" target="_self" rel="noopener nofollow">5.4 prop7.(2)</a>），知
+即与的元素交换，.证毕
+在这里与 ，一个是群内部的新结构，一个是构造出来的新群，可以理解为把外部直积的新群联系到某个已知群的子群的手段（进行直积的拆解），也是本章的重要内容。]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/05-direct-and-semidirect-products-and-abelian-groups/5.4-direct-products.html</link><guid isPermaLink="false">math/abstract algebra/group theory/05 Direct and Semidirect Products and Abelian Groups/5.4 direct products.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 07 Sep 2025 12:32:30 GMT</pubDate><enclosure url="./https://hhhhhyx142857.github.io/Obsidian" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="./https://hhhhhyx142857.github.io/Obsidian"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.4 The Class Equation]]></title><description><![CDATA[Proposition: Group Action Equivalence Relation
+Let be a group acting on the nonempty set . The relation on defined by if and only if for some is an equivalence relation. For each , the number of elements in the equivalence class containing is , the index of the stabilizer of .
+Proof
+Equivalence Relation: Reflexive: for all (by axiom 2 of group actions), so .
+Symmetric: If , then for some . Then , so .
+Transitive: If and , then and for some . Then , so . Size of Equivalence Class:
+Let be the equivalence class of . Define a map: by . Well-defined and Injective: if and only if if and only if .
+Surjective: For any coset , .
+Thus is a bijection, so . Proposition: The Class Equation
+Let be a finite group and let be representatives of the distinct conjugacy classes of not contained in the center . Then
+.
+Proposition: Normalizer/Centralizer Embedding
+If is a subgroup of , then is isomorphic to a subgroup of .
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/04-group-action/4.4-the-class-equation.html</link><guid isPermaLink="false">math/abstract algebra/group theory/04 group action/4.4 The Class Equation.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sat, 06 Sep 2025 14:01:41 GMT</pubDate></item><item><title><![CDATA[No title]]></title><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/04-group-action/4.e2-一个错误的想法（幂零类）.html</link><guid isPermaLink="false">math/abstract algebra/group theory/04 group action/4.e2 一个错误的想法（幂零类）.md</guid></item><item><title><![CDATA[屏幕截图 2025-09-05 173647]]></title><description><![CDATA[<img src="./https://hhhhhyx142857.github.io/Obsidian/images/屏幕截图-2025-09-05-173647.png" target="_self">]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/images/屏幕截图-2025-09-05-173647.html</link><guid isPermaLink="false">images/屏幕截图 2025-09-05 173647.png</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 09:37:18 GMT</pubDate><enclosure url="./https://hhhhhyx142857.github.io/Obsidian" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="./https://hhhhhyx142857.github.io/Obsidian"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Isomorphisms]]></title><description><![CDATA[Proposition: Index Multiplication
+Let , then .
+Proposition: First Isomorphism Theorem
+If is a homomorphism of groups, then and
+.
+Proposition: Second Isomorphism Theorem
+Let be a group, let and be subgroups of and assume .
+Then is a subgroup of , , and
+.
+Proposition: Third Isomorphism Theorem
+Let be a group and let and be normal subgroups of with . Then and .
+Proposition: Lattice Isomorphism Theorem
+Let be a group and let be a normal subgroup of . Then there is a bijection from the set of subgroups of which contain onto the set of subgroups of . In particular, every subgroup of is of the form for some subgroup of containing (namely, its preimage in under the natural projection homomorphism from to ).This bijection has the following properties: for all with and , if and only if ,
+if , then ,
+,
+, and if and only if . ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/01-03-quotient-,homomorphism/isomorphisms.html</link><guid isPermaLink="false">math/abstract algebra/group theory/01-03 quotient ,homomorphism/Isomorphisms.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 10:58:05 GMT</pubDate></item><item><title><![CDATA[屏幕截图 2025-09-05 173647]]></title><description><![CDATA[<img src="./https://hhhhhyx142857.github.io/Obsidian/picture/屏幕截图-2025-09-05-173647.png" target="_self">]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/picture/屏幕截图-2025-09-05-173647.html</link><guid isPermaLink="false">picture/屏幕截图 2025-09-05 173647.png</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 09:37:18 GMT</pubDate><enclosure url="./https://hhhhhyx142857.github.io/Obsidian" length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="./https://hhhhhyx142857.github.io/Obsidian"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Jordan-Holder Theorem]]></title><description><![CDATA[Proposition: Jordan-Hölder Theorem
+Let be a finite group with . Then has a composition series and
+The composition factors in a composition series are unique, namely, if and are two composition series for , then and there is some permutation of such that Proof Sketch (Inductive Argument)
+Base Case (Lemma): If , the proposition holds. Assume . Let be the smallest index such that .
+Argue that or (otherwise contradicts the simplicity of ).
+Case analysis on : If , then and , leading to , forcing and establishing the bijection.
+If , then , again forcing . Inductive Step (Lemma): If the proposition holds for series where , then it holds for . Assume and . Define .
+Case 1: . Then , and the result follows by applying the inductive hypothesis to the truncated series (length ).
+Case 2: . Then and , .
+Refine both series through . By the inductive hypothesis (applicable since the lengths of the series from to , to , and to are all ), the multiplicities and isomorphisms of factors are preserved.
+This allows constructing a bijection between the factors of the original series and via the refined series through the intersection . ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/01-03-quotient-,homomorphism/jordan-holder-theorem.html</link><guid isPermaLink="false">math/abstract algebra/group theory/01-03 quotient ,homomorphism/Jordan-Holder Theorem.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 09:15:51 GMT</pubDate></item><item><title><![CDATA[Markdown]]></title><description><![CDATA[ ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/markdown-cheatingsheet/markdown.html</link><guid isPermaLink="false">markdown cheatingsheet/Markdown.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 09:01:05 GMT</pubDate></item><item><title><![CDATA[4.e1 Cauchy's theorem]]></title><description><![CDATA[Cauchy‘s theorem If is a finite group and is a prime number dividing the order of , then contains an element of order .
+i.e., has a subgroup of order .
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/04-group-action/4.e1-cauchy's-theorem.html</link><guid isPermaLink="false">math/abstract algebra/group theory/04 group action/4.e1 Cauchy's theorem.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 08:00:03 GMT</pubDate></item><item><title><![CDATA[4.6 SIMPLICITY]]></title><description><![CDATA[Theorem 24. is simple for all .
+steps:
+if is a simple subgroup of , we know Hence and for all and , either or .
+Thus every permutation doesn't fix any element.
+Using conjugacy to create two different permutation that permute a fixed element to the same element，it create a contradiction with step 1.
+It's easy and just consider that has a cycle more than 3 or all cycle are 2-cycle.
+as for infinity if there exists a chain of subgroups such that and each is simple, then is simple. ]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/04-group-action/4.6-simplicity.html</link><guid isPermaLink="false">math/abstract algebra/group theory/04 group action/4.6 SIMPLICITY.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Fri, 05 Sep 2025 07:59:45 GMT</pubDate></item><item><title><![CDATA[4.5 Sylow's theorem]]></title><description><![CDATA[Theorem 18 (Sylow's Theorem)<a rel="noopener nofollow" class="external-link is-unresolved" href="" target="_self"></a>
+Let be a group of order , where is a prime not dividing .
+(1) Sylow -subgroups of exist, i.e., .
+(2) If is a Sylow -subgroup of and is any -subgroup of , then there exists such that , i.e., is contained in some conjugate of . In particular, any two Sylow -subgroups of are conjugate in .
+(3) The number of Sylow -subgroups of is of the form , i.e., . Further, is the index in of the normalizer for any Sylow -subgroup , hence . 考虑在里面可由共轭到达的所有群，这些群的集合记为 考虑在该群下的作用（conjugation），把S分成了若干共轭类
+不妨设的一个代表元恰好是，则
+Tip
+Let . If is any p-subgroup of , then . 如果，意味着 ，最后与矛盾. 运用数学归纳法，如果的中心被p整除，考虑陪集即可，反之，如果不被p整除，我们能找到一个conjugacy class，个数大于一且不被整除，意味着找到了一个比小且p的幂次相同的群，证毕
+把取成某个用上面的步骤即可
+Corollary 20.
+Let be a Sylow -subgroup of . Then the following are equivalent: is the unique Sylow -subgroup of , i.e., . is normal in . is characteristic in .
+All subgroups generated by elements of -power order are -groups, i.e., if is any subset of such that is a power of for all , then is a -group. Sylow定理可以与素数阶元素的计数结合使用来产生正规子群。<br>
+对于Sylow-p子群恰为order=p的子群时，每个Sylow-p子群会对应p-1个阶为p的元素，且Sylow-p子群两两只会在identity处相交，因此，Sylow群越多（<a data-tooltip-position="top" aria-label="4.5 Sylow's theorem > ^b56ad8" data-href="4.5 Sylow's theorem#^b56ad8" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/04-group-action/4.5-sylow's-theorem.html#^b56ad8" class="internal-link" target="_self" rel="noopener nofollow">corollary 20</a>告诉我们，Sylow-p子群唯一等价于该Sylow-p子群normal），可以被计数的元素就越多，也许会超出群元素个数导出矛盾，这可以反推出normal性质 proposition
+如果是的一个Sylow-p子群，则 这是明显的，因为恰好是以共轭为group action的时候，能够到达的的群的个数，即Sylow-p子群的个数 Sylow定理可以用来探索群的结构 Prob 54
+Prove the following classification: if is a finite group of order where the 's are distinct primes such that does not divide for all and , then is cyclic. Proof
+首先，若是abelian的，我们只需考虑满足阶为，由交换性，的阶数在和的阶数的最大公因数和最小公倍数之间,考虑乘到即可，为该元素为生成元构成的循环群。
+若非abelian，由引理知是非simple的，则存在的非平凡子群是normal的，考虑作用在群上(conjugacy)，则的子群同构于，因此的某个大于一的因数整除 ，这与命题矛盾，因此该请况不成立，证毕
+]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/04-group-action/4.5-sylow's-theorem.html</link><guid isPermaLink="false">math/abstract algebra/group theory/04 group action/4.5 Sylow's theorem.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 04 Sep 2025 08:54:34 GMT</pubDate></item><item><title><![CDATA[callout_selector]]></title><description><![CDATA[&lt;%*
+// 定义callout选项数组 - 添加一个Proof类型
+let calloutOptions = [
+{ display: "📝 Note (笔记)", value: "note" },
+{ display: "🔮 Abstract (摘要)", value: "abstract" },
+{ display: "ℹ️ Info (信息)", value: "info" },
+{ display: "💡 Tip (提示)", value: "tip" },
+{ display: "✅ Success (成功)", value: "success" },
+{ display: "❓ Question (问题)", value: "question" },
+{ display: "⚠️ Warning (警告)", value: "warning" },
+{ display: "❌ Failure (失败)", value: "failure" },
+{ display: "🚨 Danger (危险)", value: "danger" },
+{ display: "🐛 Bug (虫害)", value: "bug" },
+{ display: "📖 Example (示例)", value: "example" },
+{ display: "💬 Quote (引用)", value: "quote" },
+{ display: "🧮 Proof (证明)", value: "proof" } // 新增证明类型
+];// 提取display和value数组
+let displayOptions = calloutOptions.map(option =&gt; option.display);
+let valueOptions = calloutOptions.map(option =&gt; option.value);// 使用suggester让用户选择callout类型
+let chosenIndex = await tp.system.suggester(displayOptions, valueOptions, false, "请选择要插入的 Callout 类型");if (chosenIndex !== undefined) {
+let calloutContent;// 只有proof类型添加折叠语法"-"
+if (chosenIndex === "proof") { calloutContent = `&gt; [!${chosenIndex}]-\n&gt; `;
+} else { calloutContent = `&gt; [!${chosenIndex}]\n&gt; `;
+} // 添加光标位置
+calloutContent += tp.file.cursor(); tR += calloutContent;
+}
+%&gt;]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/template/callout_selector.html</link><guid isPermaLink="false">template/callout_selector.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 04 Sep 2025 08:33:04 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[<a data-href="4.5 Sylow's theorem" href="./https://hhhhhyx142857.github.io/Obsidian/math/abstract-algebra/group-theory/4.5-sylow's-theorem.html" class="internal-link" target="_self" rel="noopener nofollow">4.5 Sylow's theorem</a>]]></description><link>./https://hhhhhyx142857.github.io/Obsidian/index.html</link><guid isPermaLink="false">index.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 16:35:44 GMT</pubDate></item><item><title><![CDATA[basic math learning]]></title><description><![CDATA[&lt;%* tR += "---" %&gt;
+tags:
+create_time: &lt;% tp.file.creation_date("YYYY-MM-DD HH:mm") %&gt;
+last_modify: &lt;% tp.file.last_modified_date("YYYY-MM-DD HH:mm") %&gt;]]></description><link>./https://hhhhhyx142857.github.io/obsidian/template/basic-math-learning.html</link><guid isPermaLink="false">template/basic math learning.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 06:53:25 GMT</pubDate></item><item><title><![CDATA[Rewrite as tweet thread]]></title><description><![CDATA[Convert {} into a Twitter thread following these rules:
+1. Each tweet must be under 240 characters
+2. Start with "THREAD START" on its own line
+3. Separate tweets with ""
+4. End with "THREAD END" on its own line
+5. Make content engaging and clear
+Return only the formatted thread.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/rewrite-as-tweet-thread.html</link><guid isPermaLink="false">copilot-custom-prompts/Rewrite as tweet thread.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Rewrite as tweet]]></title><description><![CDATA[Rewrite {} as a single tweet with these requirements:
+1. Maximum 280 characters
+2. Use concise, impactful language
+3. Maintain the core message
+Return only the tweet text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/rewrite-as-tweet.html</link><guid isPermaLink="false">copilot-custom-prompts/Rewrite as tweet.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Remove URLs]]></title><description><![CDATA[Remove all URLs from {}. Preserve all other content and formatting. URLs may be in various formats (http, https, www). Return only the text with URLs removed.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/remove-urls.html</link><guid isPermaLink="false">copilot-custom-prompts/Remove URLs.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Generate glossary]]></title><description><![CDATA[Create a glossary of important terms, concepts, and phrases from {}. Format each entry as "Term: Definition". Sort entries alphabetically. Return only the glossary.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/generate-glossary.html</link><guid isPermaLink="false">copilot-custom-prompts/Generate glossary.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Generate table of contents]]></title><description><![CDATA[Generate a hierarchical table of contents for {}. Use appropriate heading levels (H1, H2, H3, etc.). Include page numbers if present. Return only the table of contents.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/generate-table-of-contents.html</link><guid isPermaLink="false">copilot-custom-prompts/Generate table of contents.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Make longer]]></title><description><![CDATA[Expand {} to twice its length by:
+1. Adding relevant details and examples
+2. Elaborating on key points
+3. Maintaining the original tone and style
+Return only the expanded text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/make-longer.html</link><guid isPermaLink="false">copilot-custom-prompts/Make longer.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Make shorter]]></title><description><![CDATA[Reduce {} to half its length while preserving these elements:
+1. Main ideas and key points
+2. Essential details
+3. Original tone and style
+Return only the shortened text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/make-shorter.html</link><guid isPermaLink="false">copilot-custom-prompts/Make shorter.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Emojify]]></title><description><![CDATA[Add relevant emojis to enhance {}. Follow these rules:
+1. Insert emojis at natural breaks in the text
+2. Never place two emojis next to each other
+3. Keep all original text unchanged
+4. Choose emojis that match the context and tone
+Return only the emojified text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/emojify.html</link><guid isPermaLink="false">copilot-custom-prompts/Emojify.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Explain like I am 5]]></title><description><![CDATA[Explain {} in simple terms that a 5-year-old would understand:
+1. Use basic vocabulary
+2. Include simple analogies
+3. Break down complex concepts
+Return only the simplified explanation.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/explain-like-i-am-5.html</link><guid isPermaLink="false">copilot-custom-prompts/Explain like I am 5.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Simplify]]></title><description><![CDATA[Simplify {} to a 6th-grade reading level (ages 11-12). Use simple sentences, common words, and clear explanations. Maintain the original key concepts. Return only the simplified text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/simplify.html</link><guid isPermaLink="false">copilot-custom-prompts/Simplify.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Summarize]]></title><description><![CDATA[Create a bullet-point summary of {}. Each bullet point should capture a key point. Return only the bullet-point summary.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/summarize.html</link><guid isPermaLink="false">copilot-custom-prompts/Summarize.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Translate to Chinese]]></title><description><![CDATA[Translate {} into Chinese:
+1. Preserve the meaning and tone
+2. Maintain appropriate cultural context
+3. Keep formatting and structure
+Return only the translated text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/translate-to-chinese.html</link><guid isPermaLink="false">copilot-custom-prompts/Translate to Chinese.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[Fix grammar and spelling]]></title><description><![CDATA[Fix the grammar and spelling of {}. Preserve all formatting, line breaks, and special characters. Do not add or remove any content. Return only the corrected text.]]></description><link>./https://hhhhhyx142857.github.io/obsidian/copilot-custom-prompts/fix-grammar-and-spelling.html</link><guid isPermaLink="false">copilot-custom-prompts/Fix grammar and spelling.md</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Sun, 31 Aug 2025 04:51:01 GMT</pubDate></item><item><title><![CDATA[[Gerald_B._Folland]_Real_Analysis__Modern_Techniq]]></title><link>./https://hhhhhyx142857.github.io/obsidian/study/[gerald_b._folland]_real_analysis__modern_techniq.html</link><guid isPermaLink="false">study/[Gerald_B._Folland]_Real_Analysis__Modern_Techniq.pdf</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Thu, 03 Jul 2025 12:28:22 GMT</pubDate></item><item><title><![CDATA[Schaums Outline of General Topology (Seymour Lipschutz) (Z-Library)]]></title><link>./https://hhhhhyx142857.github.io/obsidian/study/schaums-outline-of-general-topology-(seymour-lipschutz)-(z-library).html</link><guid isPermaLink="false">study/Schaums Outline of General Topology (Seymour Lipschutz) (Z-Library).pdf</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 01 Jul 2025 08:09:58 GMT</pubDate></item><item><title><![CDATA[Abstract Algebra Third Edition (David S. Dummit, Richard M. Foote) (Z-Library)]]></title><link>./https://hhhhhyx142857.github.io/obsidian/study/abstract-algebra-third-edition-(david-s.-dummit,-richard-m.-foote)-(z-library).html</link><guid isPermaLink="false">study/Abstract Algebra Third Edition (David S. Dummit, Richard M. Foote) (Z-Library).pdf</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Tue, 01 Jul 2025 07:54:25 GMT</pubDate></item><item><title><![CDATA[An Introductory Course in Lebesgue Spaces (CMS Books in -- Rene Erlin Castillo, Humberto Rafeiro (auth_) -- CMS Books in Mathematics, CMS Books in -- 9783319300320 -- c69b312020b934b109250706a86f3a86 -- Anna’s Arc]]></title><link>./https://hhhhhyx142857.github.io/obsidian/study/an-introductory-course-in-lebesgue-spaces-(cms-books-in-rene-erlin-castillo,-humberto-rafeiro-(auth_)-cms-books-in-mathematics,-cms-books-in-9783319300320-c69b312020b934b109250706a86f3a86-anna’s-arc.html</link><guid isPermaLink="false">study/An Introductory Course in Lebesgue Spaces (CMS Books in -- Rene Erlin Castillo, Humberto Rafeiro (auth_) -- CMS Books in Mathematics, CMS Books in -- 9783319300320 -- c69b312020b934b109250706a86f3a86 -- Anna’s Arc.pdf</guid><dc:creator><![CDATA[hyx]]></dc:creator><pubDate>Wed, 05 Mar 2025 12:42:29 GMT</pubDate></item></channel></rss>
